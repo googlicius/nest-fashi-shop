@@ -1,0 +1,392 @@
+extends layout/master.layout.pug
+
+block content
+  // Hero Section Begin
+  section.hero-section
+    .hero-items.owl-carousel
+      .single-hero-items.set-bg(data-setbg='/fashi/img/hero-1.jpg')
+        .container
+          .row
+            .col-lg-5
+              span Bag,kids
+              h1 Black friday
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                | incididunt ut labore et dolore
+              a.primary-btn(href='#') Shop Now
+          .off-card
+            h2
+              | Sale 
+              span 50%
+      .single-hero-items.set-bg(data-setbg='/fashi/img/hero-2.jpg')
+        .container
+          .row
+            .col-lg-5
+              span Bag,kids
+              h1 Black friday
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                | incididunt ut labore et dolore
+              a.primary-btn(href='#') Shop Now
+          .off-card
+            h2
+              | Sale 
+              span 50%
+  // Hero Section End
+  // Banner Section Begin
+  .banner-section.spad
+    .container-fluid
+      .row
+        .col-lg-4
+          .single-banner
+            img(src='/fashi/img/banner-1.jpg' alt='')
+            .inner-text
+              h4 Men&rsquo;s
+        .col-lg-4
+          .single-banner
+            img(src='/fashi/img/banner-2.jpg' alt='')
+            .inner-text
+              h4 Women&rsquo;s
+        .col-lg-4
+          .single-banner
+            img(src='/fashi/img/banner-3.jpg' alt='')
+            .inner-text
+              h4 Kid&rsquo;s
+  // Banner Section End
+  // Women Banner Section Begin
+  section.women-banner.spad
+    .container-fluid
+      .row
+        .col-lg-3
+          .product-large.set-bg(data-setbg='/fashi/img/products/women-large.jpg')
+            h2 Women&rsquo;s
+            a(href='#') Discover More
+        .col-lg-8.offset-lg-1
+          .filter-control
+            ul
+              li.active Clothings
+              li HandBag
+              li Shoes
+              li Accessories
+          .product-slider.owl-carousel
+            .product-item
+              .pi-pic
+                img(src='/fashi/img/products/women-1.jpg' alt='')
+                .sale Sale
+                .icon
+                  i.icon_heart_alt
+                ul
+                  li.w-icon.active
+                    a(href='#')
+                      i.icon_bag_alt
+                  li.quick-view
+                    a(href='#') + Quick View
+                  li.w-icon
+                    a(href='#')
+                      i.fa.fa-random
+              .pi-text
+                .catagory-name Coat
+                a(href='#')
+                  h5 Pure Pineapple
+                .product-price
+                  | $14.00
+                  span $35.00
+            .product-item
+              .pi-pic
+                img(src='/fashi/img/products/women-2.jpg' alt='')
+                .icon
+                  i.icon_heart_alt
+                ul
+                  li.w-icon.active
+                    a(href='#')
+                      i.icon_bag_alt
+                  li.quick-view
+                    a(href='#') + Quick View
+                  li.w-icon
+                    a(href='#')
+                      i.fa.fa-random
+              .pi-text
+                .catagory-name Shoes
+                a(href='#')
+                  h5 Guangzhou sweater
+                .product-price
+                  | $13.00
+            .product-item
+              .pi-pic
+                img(src='/fashi/img/products/women-3.jpg' alt='')
+                .icon
+                  i.icon_heart_alt
+                ul
+                  li.w-icon.active
+                    a(href='#')
+                      i.icon_bag_alt
+                  li.quick-view
+                    a(href='#') + Quick View
+                  li.w-icon
+                    a(href='#')
+                      i.fa.fa-random
+              .pi-text
+                .catagory-name Towel
+                a(href='#')
+                  h5 Pure Pineapple
+                .product-price
+                  | $34.00
+            .product-item
+              .pi-pic
+                img(src='/fashi/img/products/women-4.jpg' alt='')
+                .icon
+                  i.icon_heart_alt
+                ul
+                  li.w-icon.active
+                    a(href='#')
+                      i.icon_bag_alt
+                  li.quick-view
+                    a(href='#') + Quick View
+                  li.w-icon
+                    a(href='#')
+                      i.fa.fa-random
+              .pi-text
+                .catagory-name Towel
+                a(href='#')
+                  h5 Converse Shoes
+                .product-price
+                  | $34.00
+  // Women Banner Section End
+  // Deal Of The Week Section Begin
+  section.deal-of-week.set-bg.spad(data-setbg='/fashi/img/time-bg.jpg')
+    .container
+      .col-lg-6.text-center
+        .section-title
+          h2 Deal Of The Week
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+            br
+            |  do ipsum dolor sit amet,
+            |                         consectetur adipisicing elit
+          .product-price
+            | $35.00
+            span / HanBag
+        #countdown.countdown-timer
+          .cd-item
+            span 56
+            p Days
+          .cd-item
+            span 12
+            p Hrs
+          .cd-item
+            span 40
+            p Mins
+          .cd-item
+            span 52
+            p Secs
+        a.primary-btn(href='#') Shop Now
+  // Deal Of The Week Section End
+  // Man Banner Section Begin
+  section.man-banner.spad
+    .container-fluid
+      .row
+        .col-lg-8
+          .filter-control
+            ul
+              li.active Clothings
+              li HandBag
+              li Shoes
+              li Accessories
+          .product-slider.owl-carousel
+            .product-item
+              .pi-pic
+                img(src='/fashi/img/products/man-1.jpg' alt='')
+                .sale Sale
+                .icon
+                  i.icon_heart_alt
+                ul
+                  li.w-icon.active
+                    a(href='#')
+                      i.icon_bag_alt
+                  li.quick-view
+                    a(href='#') + Quick View
+                  li.w-icon
+                    a(href='#')
+                      i.fa.fa-random
+              .pi-text
+                .catagory-name Coat
+                a(href='#')
+                  h5 Pure Pineapple
+                .product-price
+                  | $14.00
+                  span $35.00
+            .product-item
+              .pi-pic
+                img(src='/fashi/img/products/man-2.jpg' alt='')
+                .icon
+                  i.icon_heart_alt
+                ul
+                  li.w-icon.active
+                    a(href='#')
+                      i.icon_bag_alt
+                  li.quick-view
+                    a(href='#') + Quick View
+                  li.w-icon
+                    a(href='#')
+                      i.fa.fa-random
+              .pi-text
+                .catagory-name Shoes
+                a(href='#')
+                  h5 Guangzhou sweater
+                .product-price
+                  | $13.00
+            .product-item
+              .pi-pic
+                img(src='/fashi/img/products/man-3.jpg' alt='')
+                .icon
+                  i.icon_heart_alt
+                ul
+                  li.w-icon.active
+                    a(href='#')
+                      i.icon_bag_alt
+                  li.quick-view
+                    a(href='#') + Quick View
+                  li.w-icon
+                    a(href='#')
+                      i.fa.fa-random
+              .pi-text
+                .catagory-name Towel
+                a(href='#')
+                  h5 Pure Pineapple
+                .product-price
+                  | $34.00
+            .product-item
+              .pi-pic
+                img(src='/fashi/img/products/man-4.jpg' alt='')
+                .icon
+                  i.icon_heart_alt
+                ul
+                  li.w-icon.active
+                    a(href='#')
+                      i.icon_bag_alt
+                  li.quick-view
+                    a(href='#') + Quick View
+                  li.w-icon
+                    a(href='#')
+                      i.fa.fa-random
+              .pi-text
+                .catagory-name Towel
+                a(href='#')
+                  h5 Converse Shoes
+                .product-price
+                  | $34.00
+        .col-lg-3.offset-lg-1
+          .product-large.set-bg.m-large(data-setbg='/fashi/img/products/man-large.jpg')
+            h2 Men&rsquo;s
+            a(href='#') Discover More
+  // Man Banner Section End
+  // Instagram Section Begin
+  .instagram-photo
+    .insta-item.set-bg(data-setbg='/fashi/img/insta-1.jpg')
+      .inside-text
+        i.ti-instagram
+        h5
+          a(href='#') colorlib_Collection
+    .insta-item.set-bg(data-setbg='/fashi/img/insta-2.jpg')
+      .inside-text
+        i.ti-instagram
+        h5
+          a(href='#') colorlib_Collection
+    .insta-item.set-bg(data-setbg='/fashi/img/insta-3.jpg')
+      .inside-text
+        i.ti-instagram
+        h5
+          a(href='#') colorlib_Collection
+    .insta-item.set-bg(data-setbg='/fashi/img/insta-4.jpg')
+      .inside-text
+        i.ti-instagram
+        h5
+          a(href='#') colorlib_Collection
+    .insta-item.set-bg(data-setbg='/fashi/img/insta-5.jpg')
+      .inside-text
+        i.ti-instagram
+        h5
+          a(href='#') colorlib_Collection
+    .insta-item.set-bg(data-setbg='/fashi/img/insta-6.jpg')
+      .inside-text
+        i.ti-instagram
+        h5
+          a(href='#') colorlib_Collection
+  // Instagram Section End
+  // Latest Blog Section Begin
+  section.latest-blog.spad
+    .container
+      .row
+        .col-lg-12
+          .section-title
+            h2 From The Blog
+      .row
+        .col-lg-4.col-md-6
+          .single-latest-blog
+            img(src='/fashi/img/latest-1.jpg' alt='')
+            .latest-text
+              .tag-list
+                .tag-item
+                  i.fa.fa-calendar-o
+                  |                                     May 4,2019
+                .tag-item
+                  i.fa.fa-comment-o
+                  |                                     5
+              a(href='#')
+                h4 The Best Street Style From London Fashion Week
+              p
+                | Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat
+        .col-lg-4.col-md-6
+          .single-latest-blog
+            img(src='/fashi/img/latest-2.jpg' alt='')
+            .latest-text
+              .tag-list
+                .tag-item
+                  i.fa.fa-calendar-o
+                  |                                     May 4,2019
+                .tag-item
+                  i.fa.fa-comment-o
+                  |                                     5
+              a(href='#')
+                h4 Vogue&apos;s Ultimate Guide To Autumn/Winter 2019 Shoes
+              p
+                | Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat
+        .col-lg-4.col-md-6
+          .single-latest-blog
+            img(src='/fashi/img/latest-3.jpg' alt='')
+            .latest-text
+              .tag-list
+                .tag-item
+                  i.fa.fa-calendar-o
+                  |                                     May 4,2019
+                .tag-item
+                  i.fa.fa-comment-o
+                  |                                     5
+              a(href='#')
+                h4 How To Brighten Your Wardrobe With A Dash Of Lime
+              p
+                | Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat
+      .benefit-items
+        .row
+          .col-lg-4
+            .single-benefit
+              .sb-icon
+                img(src='/fashi/img/icon-1.png' alt='')
+              .sb-text
+                h6 Free Shipping
+                p For all order over 99$
+          .col-lg-4
+            .single-benefit
+              .sb-icon
+                img(src='/fashi/img/icon-2.png' alt='')
+              .sb-text
+                h6 Delivery On Time
+                p If good have prolems
+          .col-lg-4
+            .single-benefit
+              .sb-icon
+                img(src='/fashi/img/icon-1.png' alt='')
+              .sb-text
+                h6 Secure Payment
+                p 100% secure payment
+  // Latest Blog Section End

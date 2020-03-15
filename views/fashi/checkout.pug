@@ -1,0 +1,112 @@
+extends layout/master.layout.pug
+
+block content
+  // Breadcrumb Section Begin
+  .breacrumb-section
+    .container
+      .row
+        .col-lg-12
+          .breadcrumb-text.product-more
+            a(href='./index.html')
+              i.fa.fa-home
+              |  Home
+            a(href='./shop.html') Shop
+            span Check Out
+  // Breadcrumb Section Begin
+  // Shopping Cart Section Begin
+  section.checkout-section.spad
+    .container
+      form.checkout-form(action='#')
+        .row
+          .col-lg-6
+            .checkout-content
+              a.content-btn(href='#') Click Here To Login
+            h4 Biiling Details
+            .row
+              .col-lg-6
+                label(for='fir')
+                  | First Name
+                  span *
+                input#fir(type='text')
+              .col-lg-6
+                label(for='last')
+                  | Last Name
+                  span *
+                input#last(type='text')
+              .col-lg-12
+                label(for='cun-name') Company Name
+                input#cun-name(type='text')
+              .col-lg-12
+                label(for='cun')
+                  | Country
+                  span *
+                input#cun(type='text')
+              .col-lg-12
+                label(for='street')
+                  | Street Address
+                  span *
+                input#street.street-first(type='text')
+                input(type='text')
+              .col-lg-12
+                label(for='zip') Postcode / ZIP (optional)
+                input#zip(type='text')
+              .col-lg-12
+                label(for='town')
+                  | Town / City
+                  span *
+                input#town(type='text')
+              .col-lg-6
+                label(for='email')
+                  | Email Address
+                  span *
+                input#email(type='text')
+              .col-lg-6
+                label(for='phone')
+                  | Phone
+                  span *
+                input#phone(type='text')
+              .col-lg-12
+                .create-item
+                  label(for='acc-create')
+                    | Create an account?
+                    input#acc-create(type='checkbox')
+                    span.checkmark
+          .col-lg-6
+            .checkout-content
+              input(type='text' placeholder='Enter Your Coupon Code')
+            .place-order
+              h4 Your Order
+              .order-total
+                ul.order-table
+                  li
+                    | Product 
+                    span Total
+                  li.fw-normal
+                    | Combination x 1 
+                    span $60.00
+                  li.fw-normal
+                    | Combination x 1 
+                    span $60.00
+                  li.fw-normal
+                    | Combination x 1 
+                    span $120.00
+                  li.fw-normal
+                    | Subtotal 
+                    span $240.00
+                  li.total-price
+                    | Total 
+                    span $240.00
+                .payment-check
+                  .pc-item
+                    label(for='pc-check')
+                      | Cheque Payment
+                      input#pc-check(type='checkbox')
+                      span.checkmark
+                  .pc-item
+                    label(for='pc-paypal')
+                      | Paypal
+                      input#pc-paypal(type='checkbox')
+                      span.checkmark
+                .order-btn
+                  button.site-btn.place-btn(type='submit') Place Order
+  // Shopping Cart Section End

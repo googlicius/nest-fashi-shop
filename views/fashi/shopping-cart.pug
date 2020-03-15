@@ -1,0 +1,92 @@
+extends layout/master.layout.pug
+
+block content
+  // Breadcrumb Section Begin
+  .breacrumb-section
+    .container
+      .row
+        .col-lg-12
+          .breadcrumb-text.product-more
+            a(href='./home.html')
+              i.fa.fa-home
+              |  Home
+            a(href='./shop.html') Shop
+            span Shopping Cart
+  // Breadcrumb Section Begin
+  // Shopping Cart Section Begin
+  section.shopping-cart.spad
+    .container
+      .row
+        .col-lg-12
+          .cart-table
+            table
+              thead
+                tr
+                  th Image
+                  th.p-name Product Name
+                  th Price
+                  th Quantity
+                  th Total
+                  th
+                    i.ti-close
+              tbody
+                tr
+                  td.cart-pic.first-row
+                    img(src='img/cart-page/product-1.jpg' alt='')
+                  td.cart-title.first-row
+                    h5 Pure Pineapple
+                  td.p-price.first-row $60.00
+                  td.qua-col.first-row
+                    .quantity
+                      .pro-qty
+                        input(type='text' value='1')
+                  td.total-price.first-row $60.00
+                  td.close-td.first-row
+                    i.ti-close
+                tr
+                  td.cart-pic
+                    img(src='img/cart-page/product-2.jpg' alt='')
+                  td.cart-title
+                    h5 American lobster
+                  td.p-price $60.00
+                  td.qua-col
+                    .quantity
+                      .pro-qty
+                        input(type='text' value='1')
+                  td.total-price $60.00
+                  td.close-td
+                    i.ti-close
+                tr
+                  td.cart-pic
+                    img(src='img/cart-page/product-3.jpg' alt='')
+                  td.cart-title
+                    h5 Guangzhou sweater
+                  td.p-price $60.00
+                  td.qua-col
+                    .quantity
+                      .pro-qty
+                        input(type='text' value='1')
+                  td.total-price $60.00
+                  td.close-td
+                    i.ti-close
+          .row
+            .col-lg-4
+              .cart-buttons
+                a.primary-btn.continue-shop(href='#') Continue shopping
+                a.primary-btn.up-cart(href='#') Update cart
+              .discount-coupon
+                h6 Discount Codes
+                form.coupon-form(action='#')
+                  input(type='text' placeholder='Enter your codes')
+                  button.site-btn.coupon-btn(type='submit') Apply
+            .col-lg-4.offset-lg-4
+              .proceed-checkout
+                ul
+                  li.subtotal
+                    | Subtotal 
+                    span $240.00
+                  li.cart-total
+                    | Total 
+                    span $240.00
+                a.proceed-btn(href='#') PROCEED TO CHECK OUT
+  // Shopping Cart Section End
