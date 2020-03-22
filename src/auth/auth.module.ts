@@ -5,19 +5,20 @@ import { PassportModule } from '@nestjs/passport';
 import { LocalStrategy } from './local.strategy';
 import { AuthController } from './auth.controller';
 import { JwtModule } from '@nestjs/jwt';
-import { JWT_SECRET } from './constants';
 import { JwtStrategy } from './jwt.strategy';
+import { SessionSerializer } from './session.serializer';
 
 @Module({
   imports: [
     UsersModule,
     PassportModule,
     JwtModule.register({
-      secret: JWT_SECRET,
+      // FIXME: Put into env
+      secret: 'nest cats',
       signOptions: { expiresIn: '60s' },
     }),
   ],
-  providers: [AuthService, LocalStrategy, JwtStrategy],
+  providers: [AuthService, LocalStrategy, JwtStrategy, SessionSerializer],
   controllers: [AuthController],
 })
 export class AuthModule {}

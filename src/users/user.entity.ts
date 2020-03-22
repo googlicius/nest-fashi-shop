@@ -7,7 +7,7 @@ import {
   JoinColumn,
   BeforeInsert,
 } from 'typeorm';
-import { Photo } from 'src/photos/photo.entity';
+import { Photo } from '../photos/photo.entity';
 const bcrypt = require('bcrypt');
 
 @Entity()

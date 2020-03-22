@@ -1,7 +1,12 @@
-import { Controller, Get, Render } from '@nestjs/common';
+import { Controller, Get, Render, UseGuards, UseFilters } from '@nestjs/common';
 import { AppService } from './app.service';
+import { AuthenticatedGuard } from './common/guards/authentiated.guard';
+import { AuthExceptionFilter } from './common/filters/auth-exceptions.filter';
+import { User } from './common/decorators/user.decorator';
+import { User as UserEntity } from './users/user.entity';
 
 @Controller()
+@UseFilters(AuthExceptionFilter)
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
@@ -9,7 +14,7 @@ export class AppController {
   @Render('fashi/index')
   getHello() {
     return {
-      message: 'Nestjs',
+      message: 'Hello World!'
     };
   }
 
@@ -37,9 +42,11 @@ export class AppController {
     return {};
   }
 
+  @UseGuards(AuthenticatedGuard)
   @Get('/fashi/check-out')
   @Render('fashi/checkout')
-  getCheckout() {
+  getCheckout(@User() user: UserEntity) {
+    console.log('email>>>', user.email);
     return {};
   }
 

@@ -5,6 +5,7 @@ import { join } from 'path';
 import expressSession = require('express-session');
 import flash = require('connect-flash');
 import exphbs = require('express-handlebars');
+import passport = require('passport');
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
@@ -17,13 +18,15 @@ async function bootstrap() {
     expressSession({
       // FIXME: put into env
       secret: 'A7uH6bN5qL&hX9i',
-      resave: true,
+      resave: false,
       saveUninitialized: false,
       // store: new MongoStore({ mongooseConnection: mongoose.connection }),
     }),
   );
+  app.use(passport.initialize());
+  app.use(passport.session());
   app.use(flash());
 
-  await app.listen(3000);
+  await app.listen(3002);
 }
 bootstrap();
