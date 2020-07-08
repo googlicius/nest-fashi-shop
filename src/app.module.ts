@@ -8,7 +8,7 @@ import { PhotosModule } from './photos/photos.module';
 import { AuthModule } from './auth/auth.module';
 import configuration from './config/configuration';
 import { ResponseLocalsMiddleware } from './common/middlewares/response-locals.middleware';
-import { ProductModule } from './product/product.module';
+// import { ProductModule } from './product/product.module';
 import { ProductsModule } from './products/products.module';
 
 @Module({
@@ -25,7 +25,7 @@ import { ProductsModule } from './products/products.module';
     UsersModule,
     PhotosModule,
     AuthModule,
-    ProductModule,
+    // ProductModule,
     ProductsModule,
   ],
   controllers: [AppController],
