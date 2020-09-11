@@ -1,5 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { NestExpressApplication } from '@nestjs/platform-express';
+import * as Sentry from '@sentry/node';
 import { AppModule } from './app.module';
 import { join } from 'path';
 import expressSession = require('express-session');
@@ -9,6 +10,14 @@ import passport = require('passport');
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
+
+  Sentry.init({
+    dsn:
+      'https://a2c220be49144a6e9ed105f6383e1223@o428638.ingest.sentry.io/5374240',
+  });
+
+  // The request handler must be the first middleware on the app
+  app.use(Sentry.Handlers.requestHandler());
 
   app.useStaticAssets(join(__dirname, '..', 'public'));
   app.setBaseViewsDir(join(__dirname, '..', 'views'));
