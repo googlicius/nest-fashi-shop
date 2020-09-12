@@ -8,6 +8,10 @@ pipeline {
         stage("Build") {
             steps {
                 echo "Building project..."
+                nodejs('Node_10.19.0') {
+                    sh 'yarn'
+                    sh 'yarn build'
+                }
             }
             post {
                 success {
@@ -19,6 +23,11 @@ pipeline {
             }
         }
         stage("Test") {
+            when {
+                expression {
+                    params.executeTests
+                }
+            }
             steps {
                 echo "Testing project..."
             }
