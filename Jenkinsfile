@@ -30,6 +30,9 @@ pipeline {
             }
             steps {
                 echo "Testing project..."
+                nodejs('Node_10.19.0') {
+                    sh 'yarn test'
+                }
             }
             post {
                 success {
