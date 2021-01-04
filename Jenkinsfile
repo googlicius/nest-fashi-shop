@@ -18,7 +18,7 @@ pipeline {
                     echo "========Build successfully 123========"
                 }
                 failure {
-                    echo "========Build failed========"
+                    echo "========Build failed successfully========"
                 }
             }
         }
