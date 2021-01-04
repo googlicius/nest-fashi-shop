@@ -15,7 +15,7 @@ pipeline {
             }
             post {
                 success {
-                    echo "========Build successfully========"
+                    echo "========Build successfully 123========"
                 }
                 failure {
                     echo "========Build failed========"
