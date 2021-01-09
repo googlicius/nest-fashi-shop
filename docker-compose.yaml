@@ -31,6 +31,18 @@ services:
       # Where our data will be persisted
     volumes:
       - my-db:/var/lib/mysql
+
+  # phpmyadmin
+  phpmyadmin:
+    depends_on:
+      - mysql_db
+    image: phpmyadmin/phpmyadmin
+    # restart: always
+    ports:
+      - '8083:80'
+    environment:
+      PMA_HOST: 'mysql_db'
+      MYSQL_ROOT_PASSWORD: 'P@ssw0rd'
 # Names our volume
 volumes:
   my-db:

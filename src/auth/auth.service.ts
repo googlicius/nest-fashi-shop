@@ -16,7 +16,7 @@ export class AuthService {
   async validateUser(email: string, pass: string): Promise<User> {
     const user = await this.userRepository
       .createQueryBuilder('user')
-      .where({ where: [{ email }] })
+      .where({ email })
       .getOne();
 
     if (user) {

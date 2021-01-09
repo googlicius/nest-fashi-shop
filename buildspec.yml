@@ -1,0 +1,36 @@
+version: 0.2
+
+cache:
+  paths:
+    - '/root/.npm/**/*'
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 12.x
+    commands:
+      - echo INSTALLING YARN...
+      - npm install -g yarn
+
+      - echo INSTALLING NESTJS/CLI...
+      - npm install -g @nestjs/cli
+
+      - echo INSTALLING JEST...
+      - npm install -g jest
+
+  pre_build:
+    commands:
+      - echo INSTALLING DEPENDENCIES...
+      - yarn install --frozen-lockfile
+
+  build:
+    commands:
+      - yarn build
+
+  test:
+    commands:
+      - yarn test
+
+artifacts:
+  files:
+    - dist/**/*
